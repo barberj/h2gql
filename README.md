@@ -1,5 +1,7 @@
 # H2gql
 
+How to GraphQL using Phoenix and Absinthe (https://www.howtographql.com/graphql-elixir/1-getting-started/)
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
