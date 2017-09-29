@@ -5,7 +5,12 @@ defmodule H2gqlWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", H2gqlWeb do
+  scope "/" do
     pipe_through :api
+
+    forward "/graphiql", Absinthe.Plug.GraphiQL,
+      schema: H2gqlWeb.Schema,
+      interface: :simple,
+      context: %{pubsub: H2gqlWeb.Endpoint}
   end
 end
