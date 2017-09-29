@@ -34,7 +34,7 @@ defmodule H2gqlWeb.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_h2gql_key",
-    signing_salt: "kvS2yOUB"
+    signing_salt: "lCcl/EpR"
 
   plug H2gqlWeb.Router
 

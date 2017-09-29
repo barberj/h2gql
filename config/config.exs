@@ -12,7 +12,7 @@ config :h2gql,
 # Configures the endpoint
 config :h2gql, H2gqlWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "/gmZoRk2seDWtx4yAJpZke9PPARHBYVOjAm7pL8irzuQLB4VXqoU/CsXl1BTFqcG",
+  secret_key_base: "W0Q+K6KVPV40tsirclot7A58VfGPDoWcD4srvu2P2NvAmclu8RFKa2VFvn6EXxjN",
   render_errors: [view: H2gqlWeb.ErrorView, accepts: ~w(json)],
   pubsub: [name: H2gql.PubSub,
            adapter: Phoenix.PubSub.PG2]
