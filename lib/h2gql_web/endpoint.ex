@@ -14,8 +14,6 @@ defmodule H2gqlWeb.Endpoint do
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
   if code_reloading? do
-    socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
-    plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
   end
 
@@ -36,7 +34,7 @@ defmodule H2gqlWeb.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_h2gql_key",
-    signing_salt: "Ws32x3C3"
+    signing_salt: "kvS2yOUB"
 
   plug H2gqlWeb.Router
 

@@ -27,7 +27,11 @@ defmodule H2gqlWeb.ConnCase do
   end
 
 
-  setup _tags do
+  setup tags do
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(H2gql.Repo)
+    unless tags[:async] do
+      Ecto.Adapters.SQL.Sandbox.mode(H2gql.Repo, {:shared, self()})
+    end
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end
 

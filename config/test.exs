@@ -8,3 +8,12 @@ config :h2gql, H2gqlWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+
+# Configure your database
+config :h2gql, H2gql.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "postgres",
+  database: "h2gql_test",
+  hostname: "localhost",
+  pool: Ecto.Adapters.SQL.Sandbox

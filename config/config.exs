@@ -5,11 +5,15 @@
 # is restricted to this project.
 use Mix.Config
 
+# General application configuration
+config :h2gql,
+  ecto_repos: [H2gql.Repo]
+
 # Configures the endpoint
 config :h2gql, H2gqlWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "mO1zbNuj6yngSFy224PeHiGoe8uraIxGOwdmEWRJUjSE2CcTFjQbYNzqVrVArt7m",
-  render_errors: [view: H2gqlWeb.ErrorView, accepts: ~w(html json)],
+  secret_key_base: "/gmZoRk2seDWtx4yAJpZke9PPARHBYVOjAm7pL8irzuQLB4VXqoU/CsXl1BTFqcG",
+  render_errors: [view: H2gqlWeb.ErrorView, accepts: ~w(json)],
   pubsub: [name: H2gql.PubSub,
            adapter: Phoenix.PubSub.PG2]
 

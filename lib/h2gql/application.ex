@@ -8,6 +8,8 @@ defmodule H2gql.Application do
 
     # Define workers and child supervisors to be supervised
     children = [
+      # Start the Ecto repository
+      supervisor(H2gql.Repo, []),
       # Start the endpoint when the application starts
       supervisor(H2gqlWeb.Endpoint, []),
       # Start your own worker by calling: H2gql.Worker.start_link(arg1, arg2, arg3)
